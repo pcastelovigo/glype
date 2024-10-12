@@ -1484,7 +1484,7 @@ if ( $fetch->error ) {
 
 # Is this AJAX? If so, don't cache, log or parse.
 # Also, assume ajax if return is VERY short.
-if ( $flag == 'ajax' || ( $fetch->parseType && strlen($document) < 10 ) ) {
+if ($flag == 'ajax' || ($fetch->parseType && $document !== null && strlen($document) < 10)) {
 
 	# Print if not already printed
 	if ( $fetch->parseType ) {
