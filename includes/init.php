@@ -76,6 +76,7 @@ $phrases['server_busy']		 = 'The server is currently busy and unable to process 
 $phrases['http_error']		 = 'The requested resource could not be loaded because the server returned an error:<br> &nbsp; <b>%s %s</b> (<span class="tooltip" onmouseout="exit()" onmouseover="tooltip(\'%s\');">?</span>).';
 $phrases['curl_error']		 = 'The requested resource could not be loaded. libcurl returned the error:<br><b>%s</b>';
 $phrases['unknown_error']	 = 'The script encountered an unknown error. Error id: <b>%s</b>.';
+$phrases['missing_curl']	 = 'The server is missing the PHP cURL extension required to load pages. Please enable it and try again.';
 
 # If an HTTP error (status code >= 400) is encountered, the script will look here
 # for an additional "friendly" explanation of the problem.

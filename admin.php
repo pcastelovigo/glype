@@ -288,6 +288,10 @@ class Location {
 
 class Input {
 
+	public $GET = array();
+	public $POST = array();
+	public $COOKIE = array();
+
 	# Set up inputs
 	public function __construct() {
 

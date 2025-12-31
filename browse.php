@@ -21,6 +21,10 @@ if (empty($adminDetails)) {
 	header("HTTP/1.1 302 Found"); header("Location: admin.php"); exit;
 }
 
+if (!function_exists('curl_init') || !defined('CURLOPT_CONNECTTIMEOUT')) {
+	error('missing_curl');
+}
+
 # Debug mode - stores extra information in the cURL wrapper object and prints it
 # out. It produces an ugly mess but still a quick tool for debugging.
 define('DEBUG_MODE', 0);
