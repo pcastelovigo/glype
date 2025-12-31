@@ -17,7 +17,7 @@
 
 require 'includes/init.php';
 
-if (count($adminDetails)===0) {
+if (empty($adminDetails)) {
 	header("HTTP/1.1 302 Found"); header("Location: admin.php"); exit;
 }
 

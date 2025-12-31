@@ -104,8 +104,9 @@ if ( version_compare(PHP_VERSION, 5) < 0 ) {
 	$themeReplace['error'] = '<div id="error">You need PHP 5 to run this script. You are currently running ' . PHP_VERSION . '</div>';
 }
 
-if (count($adminDetails)===0) {
-	header("HTTP/1.1 302 Found"); header("Location: admin.php"); exit;
+if (empty($adminDetails)) {
+	$themeReplace['error'] = '<div id="error">Glype is not yet configured. '
+		. 'Access the <a href="admin.php">administration panel</a> to complete the configuration.</div>';
 }
 
 
