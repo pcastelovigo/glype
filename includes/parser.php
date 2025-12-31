@@ -975,6 +975,9 @@ function analyze_js($input, $start, $argPos = false) {
 
 			# Commas - tell us which argument it is
 			case ',':
+				if ( ! $argPos ) {
+					break;
+				}
 
 				# Ignore commas inside other functions or whatnot
 				if ( $openObjects || $openBrackets || $openArrays ) {
