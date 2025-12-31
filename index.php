@@ -100,8 +100,8 @@ if ( isset($_GET['e']) && isset($phrases[$_GET['e']]) ) {
 * Check PHP version
 ******************************************************************/
 
-if ( version_compare(PHP_VERSION, 5) < 0 ) {
-	$themeReplace['error'] = '<div id="error">You need PHP 5 to run this script. You are currently running ' . PHP_VERSION . '</div>';
+if ( version_compare(PHP_VERSION, 8) < 0 ) {
+	$themeReplace['error'] = '<div id="error">You need PHP 8 to run this script. You are currently running ' . PHP_VERSION . '</div>';
 }
 
 if (empty($adminDetails)) {
