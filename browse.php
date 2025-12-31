@@ -332,6 +332,11 @@ $toSet[CURLOPT_SSL_VERIFYHOST] = false;
 # Send an empty Expect header (avoids 100 responses)
 $toSet[CURLOPT_HTTPHEADER][] = 'Expect:';
 
+# Force HTTP/1.1 to avoid HTTP/2 protocol errors from some origins.
+if (defined('CURLOPT_HTTP_VERSION') && defined('CURL_HTTP_VERSION_1_1')) {
+	$toSet[CURLOPT_HTTP_VERSION] = CURL_HTTP_VERSION_1_1;
+}
+
 # Use IPv4 for DNS resolution
 if (defined('CURLOPT_IPRESOLVE') && defined('CURL_IPRESOLVE_V4')) {
 	$toSet[CURLOPT_IPRESOLVE][] = 'CURL_IPRESOLVE_V4';
